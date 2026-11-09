@@ -23,10 +23,80 @@
 .studio-tabs button{font-size:12px;min-height:46px}
 @media(max-width:800px){.photo-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.branch-grid{grid-template-columns:1fr}}
 @media(max-width:580px){.photo-gallery{grid-template-columns:1fr}.photo-gallery img{height:260px}.admin-kpis{grid-template-columns:repeat(2,1fr)}.float-wa{bottom:12px;right:12px;padding:12px 15px}.branch-photo{height:210px}}
+
+/* IHD Group V2.1 Home: product discovery, transparent delivery FAQ, education */
+.home-delivery-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:#30241e;color:#f7eee5}
+.home-delivery-strip>div{display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap;padding:22px 12px;border-right:1px solid #6e5444}
+.home-delivery-strip strong{font-size:13px;font-weight:700;letter-spacing:.02em}
+.home-delivery-strip small{font-size:11px;color:#d3bca7;width:100%;text-align:center}
+.home-feature-icon{font:26px Georgia,serif;color:#d6a77f}
+.home-feature-block{padding:75px 52px 65px;background:#fcfaf6}
+.home-section-heading{display:flex;align-items:end;justify-content:space-between;gap:22px;margin-bottom:25px}
+.home-section-heading h2,.home-shipping h2,.home-journal h2{font-size:clamp(29px,3.8vw,46px);line-height:1.18}
+.home-section-heading p{font-size:14px;color:#79695f;line-height:1.75;max-width:670px}
+.home-product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.home-product{border:1px solid #eaded0;background:white;min-width:0;overflow:hidden}
+.home-product-photo{height:225px;background:#e5d4c3}
+.home-product-photo img{height:100%;width:100%;display:block;object-fit:cover}
+.home-product-desc{padding:23px}
+.home-product-desc h3{font-size:24px;margin:12px 0 10px;line-height:1.25}
+.home-product-desc p{font-size:13px;line-height:1.8;min-height:54px;color:#78695f}
+.home-product-label{display:block;font-size:11px;line-height:1.5;color:#987960;margin:12px 0}
+.home-enquire{border:1px solid #bba28c;background:#f9f4ee;padding:11px 13px;font-size:12px;font-weight:700;color:#694b39;width:100%;text-align:left}
+.home-enquire:hover{background:#e8d7c4}
+.home-disclaimer{font-size:11px;line-height:1.75;color:#8e7666;margin:20px 0 0}
+.home-shipping{display:grid;grid-template-columns:.95fr 1.05fr;background:#eee6dc}
+.home-shipping-intro{padding:64px 52px;background:#30241f;color:#f9f1e8}
+.home-shipping-intro .eyebrow{color:#d7ae8c}
+.home-shipping-intro p{font-size:14px;line-height:1.85;color:#d7c4b1}
+.home-shipping-intro button{margin-top:22px}
+.home-shipping-details{padding:40px 45px}
+.home-info-row{display:flex;gap:18px;padding:16px 0;border-bottom:1px solid #d9c7b6}
+.home-info-row:last-child{border:0}
+.home-step{color:#a77f61;font:28px Georgia,serif;min-width:36px}
+.home-info-row h3{font-size:19px;margin:2px 0 6px}
+.home-info-row p{font-size:12px;line-height:1.8;color:#76665c;margin:0}
+.home-journal{padding:65px 52px;background:#f7f3ee}
+.home-journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.home-journal-grid article{padding:24px;border:1px solid #e3d6c7;background:#fff}
+.home-journal-grid h3{font-size:22px;line-height:1.3;margin:12px 0}
+.home-journal-grid p{font-size:13px;line-height:1.75;color:#796b60}
+@media(max-width:870px){.home-product-grid,.home-journal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.home-shipping{grid-template-columns:1fr}.home-shipping-details{padding:36px}.home-feature-block,.home-journal{padding:45px 27px}.home-section-heading{align-items:start;flex-direction:column}}
+@media(max-width:550px){.home-product-grid,.home-journal-grid{grid-template-columns:1fr}.home-delivery-strip{grid-template-columns:1fr}.home-delivery-strip>div{padding:13px 18px;border-right:0;border-bottom:1px solid #68513f;justify-content:flex-start}.home-delivery-strip small{width:auto;text-align:left}.home-feature-block,.home-journal{padding:34px 20px}.home-shipping-intro{padding:38px 22px}.home-shipping-details{padding:23px 22px}.home-product-photo{height:230px}}
 </style></head><body>
 <div class="banner">IHD GROUP · CUSTOMER WEBSITE V2 PREVIEW | WHATSAPP ENQUIRIES · NO ONLINE CONFIRMED BOOKINGS OR PAYMENTS</div>
 <div class="top"><button onclick="page('home')" style="border:0;background:none;text-align:left"><div class="logo">ihd<b>.</b></div><div class="brand-label">INSPIRATION HAIR DESIGN GROUP</div></button><nav class="nav" id="nav"></nav></div>
-<div class="container" id="home"><div class="hero"><div class="hero-copy"><div class="eyebrow">We Inspire Your Beauty Sense</div><h1 id="heroText">Beauty begins with inspiration.</h1><p id="heroSubtitle">Professional hair artistry, scalp care and thoughtful experiences, crafted around you.</p><p>启发你的美丽品味 · 北马专业发型与头皮护理品牌</p><div class="flex" style="margin:22px 0"><button class="primary" onclick="page('booking')">Book Now · 预约 →</button><button class="button" onclick="page('shop')">Explore Shop →</button></div><span class="pill">CONCEPT ONLY · NO LIVE BOOKINGS</span></div><div class="hero-art" id="heroArt"><span>LICENSED STOCK PHOTO · NOT AN IHD BRANCH</span></div></div><div class="pad"><div class="eyebrow">An Experience Made for You</div><h2>More than a hairstyle.</h2><div class="cards" id="homeServices"></div></div><div class="dark"><div class="eyebrow">Founder & Director</div><h2>Steve Ooi</h2><p>Professional artistry · Personal attention · Hair & scalp wellbeing</p><button class="button" onclick="page('about')">Discover Our Story</button></div></div>
+<div class="container" id="home"><div class="hero"><div class="hero-copy"><div class="eyebrow">We Inspire Your Beauty Sense</div><h1 id="heroText">Beauty begins with inspiration.</h1><p id="heroSubtitle">Professional hair artistry, scalp wellness and a future home-care collection. Explore our product categories, delivery information and salon booking below.</p><p>启发你的美丽品味 · 北马专业发型与头皮护理品牌</p><div class="flex" style="margin:22px 0"><button class="primary" onclick="page('booking')">Book Now · 预约 →</button><button class="button" onclick="page('shop')">Explore Shop →</button></div><span class="pill">CONCEPT ONLY · NO LIVE BOOKINGS</span></div><div class="hero-art" id="heroArt"><span>LICENSED STOCK PHOTO · NOT AN IHD BRANCH</span></div></div><div class="home-delivery-strip" aria-label="Product and delivery information">
+  <div><span class="home-feature-icon">✦</span><strong>Professional Haircare</strong><small>洗护 · 头皮护理 · Styling</small></div>
+  <div><span class="home-feature-icon">⌂</span><strong>In-Salon Collection</strong><small>可询问两家门市取货详情</small></div>
+  <div><span class="home-feature-icon">▣</span><strong>Delivery Enquiries</strong><small>邮递范围及运费须确认</small></div>
+</div>
+<section class="home-feature-block" aria-label="Haircare products introduction">
+  <div class="home-section-heading"><div><div class="eyebrow">THE HAIRCARE EDIT · 专业洗护</div><h2>Bring the salon experience home.</h2><p>Discover thoughtful care for everyday hair and scalp needs. Our future online collection will bring salon-recommended routines closer to you.</p></div><button class="button" onclick="page('shop')">Explore All Products →</button></div>
+  <div class="home-product-grid">
+    <article class="home-product"><div class="home-product-photo home-product-photo-one"><img loading="lazy" src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&amp;fit=crop&amp;w=850&amp;q=80" alt="Illustrative professional hair and beauty care products, not an actual IHD item"></div><div class="home-product-desc"><span class="eyebrow">01 · DAILY CARE</span><h3>Shampoo &amp; Conditioner</h3><p>温和清洁与日常护发，让居家护理更有条理。</p><span class="home-product-label">Category preview · 商品品牌及售价待确认</span><button onclick="homeProductEnquiry('Shampoo &amp; Conditioner')" class="home-enquire">Enquire on WhatsApp ↗</button></div></article>
+    <article class="home-product"><div class="home-product-photo home-product-photo-two"><img loading="lazy" src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&amp;fit=crop&amp;w=850&amp;q=80" alt="Illustrative salon beauty products for scalp wellness, not actual IHD merchandise"></div><div class="home-product-desc"><span class="eyebrow">02 · SCALP WELLNESS</span><h3>Scalp Care</h3><p>头皮护理系列，按个人发质向专业人员咨询合适选择。</p><span class="home-product-label">Category preview · 商品品牌及售价待确认</span><button onclick="homeProductEnquiry('Scalp Care')" class="home-enquire">Enquire on WhatsApp ↗</button></div></article>
+    <article class="home-product"><div class="home-product-photo home-product-photo-three"><img loading="lazy" src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&amp;fit=crop&amp;w=850&amp;q=80" alt="Illustrative treatment products for haircare, not actual IHD stock"></div><div class="home-product-desc"><span class="eyebrow">03 · EXTRA TREATMENT</span><h3>Hair Treatment &amp; Styling</h3><p>深层护理及造型产品类别，延续日常发型质感。</p><span class="home-product-label">Category preview · 商品品牌及售价待确认</span><button onclick="homeProductEnquiry('Hair Treatment &amp; Styling')" class="home-enquire">Enquire on WhatsApp ↗</button></div></article>
+  </div>
+  <p class="home-disclaimer">Illustrative stock images. Product availability, brands, prices, retail authorization and individual suitability must be confirmed by IHD Group. 示意图片非 IHD 实际货品；网店尚未正式开放销售。</p>
+</section>
+<section class="home-shipping" aria-label="Ordering and delivery information">
+  <div class="home-shipping-intro"><div class="eyebrow">ORDERING &amp; DELIVERY · 商品订购与邮递</div><h2>Haircare, made more convenient.</h2><p>From product enquiries to future online ordering and delivery. Speak with the salon first to confirm which products are available and how they can reach you.</p><button class="whatsbtn" onclick="homeProductEnquiry('Product ordering and delivery options')">Ask About Delivery on WhatsApp ↗</button></div>
+  <div class="home-shipping-details">
+    <div class="home-info-row"><span class="home-step">01</span><div><h3>Ask &amp; Choose · 询问产品</h3><p>先联系 IHD 查询护理产品、规格、售价及当前库存。</p></div></div>
+    <div class="home-info-row"><span class="home-step">02</span><div><h3>Collection or Shipping · 门店取货／邮递</h3><p>可询问 Raja Uda 或 Sungai Petani 门市取货；西马、东马邮递服务是否开放，需由店方确认。</p></div></div>
+    <div class="home-info-row"><span class="home-step">03</span><div><h3>Charges &amp; Estimated Arrival · 运费与到货</h3><p>运费、快递公司、预计送达时间和退换货政策尚未公布；下单前以门店确认为准。</p></div></div>
+    <div class="home-info-row"><span class="home-step">04</span><div><h3>Future Online Checkout · 未来线上订购</h3><p>网上付款、配送追踪与订单查询正在规划中，目前暂不收取线上付款。</p></div></div>
+  </div>
+</section>
+<section class="home-journal" aria-label="Hair care tips and helpful information">
+  <div class="eyebrow">HAIRCARE NOTES · 护发资讯</div><h2>Useful tips before your next visit.</h2>
+  <div class="home-journal-grid">
+    <article><span class="eyebrow">CARE NOTE 01</span><h3>Choose a routine for your hair type</h3><p>洗发水与护发素应按头皮状况、发质及日常习惯选择，护理需求可咨询发型师。</p></article>
+    <article><span class="eyebrow">CARE NOTE 02</span><h3>Colour &amp; treatment consultations</h3><p>染烫前可与发型师讨论发质、保养习惯、预期效果及维护需求。</p></article>
+    <article><span class="eyebrow">CARE NOTE 03</span><h3>Plan your salon appointment</h3><p>预约时可先说明服务、期望造型和方便的时段，以便门市确认安排。</p></article>
+  </div><p class="home-disclaimer">General educational tips, not personalized medical advice or official product claims. 如有持续性头皮不适，应向合格医疗专业人员咨询。</p>
+</section><div class="pad"><div class="eyebrow">An Experience Made for You</div><h2>More than a hairstyle.</h2><div class="cards" id="homeServices"></div></div><div class="dark"><div class="eyebrow">Founder & Director</div><h2>Steve Ooi</h2><p>Professional artistry · Personal attention · Hair & scalp wellbeing</p><button class="button" onclick="page('about')">Discover Our Story</button></div></div>
 <section class="container pad off" id="services"><div class="eyebrow">Discover Your Look</div><h1>Our Services.</h1><p class="note">Durations are samples and prices require the salon's confirmation.</p><div class="cards" id="servicesGrid"></div></section>
 <section id="gallery" class="container pad off"><div class="eyebrow">Professional Hair Artistry / 发型艺术</div><h1>Find your next look.</h1><p class="note">A polished image showcase using free-license Unsplash reference photography. <b>These are illustrative stock images, not actual IHD customer results.</b> IHD can replace all photos with authorised work through the future image library.</p><div class="photo-gallery">
 <article><img loading="lazy" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Hairstyling mood reference"><div class="photo-details"><strong>Signature Hair Styling</strong><span>剪发与造型 · licensed stock reference</span></div></article>
@@ -100,4 +170,9 @@ function v2Book(){
 }
 function v2StudioTab(t){['content','imports','roles','bookings'].forEach(x=>$('studio'+x[0].toUpperCase()+x.slice(1)).classList.toggle('off',x!==t));if(t==='bookings')renderBookingList();}
 book=v2Book;studioTab=v2StudioTab;renderBookingList();
+
+function homeProductEnquiry(category){
+ const message='Hello IHD GROUP, I would like to enquire about '+category+'. Please advise available items, prices, delivery/pickup options and postage charges. Thank you.';
+ window.open('https://wa.me/60127879928?text='+encodeURIComponent(message),'_blank','noopener,noreferrer');
+}
 </script><a class="float-wa" href="https://wa.me/60127879928?text=Hello%20IHD%20Group%2C%20I%20want%20to%20ask%20about%20your%20salon%20services" target="_blank" rel="noopener noreferrer">WhatsApp · 012-787 9928</a></body></html>
