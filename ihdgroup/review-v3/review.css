@@ -45,3 +45,9 @@ html[lang="en"] .ihd-home-culture [data-ihd-locale="en"]{display:block}
 html[lang="ms"] .ihd-home-culture [data-ihd-locale="ms"]{display:block}
 /* Before script runs, default Chinese review */
 html:not([lang="zh-CN"]):not([lang="en"]):not([lang="ms"]) .ihd-home-culture [data-ihd-locale="zh"]{display:block}
+
+/* Promote the official Culture link over the back-office demonstration. */
+.top .nav button.ihd-culture-nav{color:#865734;border:1px solid #c9a98c;background:#f5e6d6;font-weight:700;border-radius:5px;padding:10px 13px;min-height:42px}
+.top .nav button.ihd-culture-nav.active{background:#38271c;color:#fff;border-color:#38271c}
+.ihd-culture-hero-cta{background:#e8d7c7!important;color:#4c3022!important;font-weight:700}
+@media(max-width:600px){.top .nav button.ihd-culture-nav{padding:10px 12px;min-height:44px}}
