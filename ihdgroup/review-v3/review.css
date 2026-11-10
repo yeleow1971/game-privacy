@@ -37,3 +37,11 @@
 @media(max-width:1000px){.top{gap:10px}.top nav{order:3;width:100%;justify-content:center}.ihd-lang{margin-left:auto}}
 @media(max-width:800px){.ihd-culture-cover{padding:53px 34px}.ihd-culture-container{padding:37px 27px}.ihd-values-grid{grid-template-columns:1fr}.ihd-manifesto{padding:32px 30px}.ihd-home-culture{padding:42px 27px}}
 @media(max-width:560px){.top nav{gap:7px;justify-content:flex-start}.top nav button{font-size:11px;padding:7px 5px}.ihd-lang button{padding:8px 9px}.ihd-culture-cover{padding:43px 22px}.ihd-culture-container{padding:31px 17px}.ihd-value-card{padding:21px 20px}.ihd-manifesto{padding:27px 21px}.ihd-home-culture{padding:34px 20px}.ihd-reviewbar{padding:11px 14px;flex-direction:column;align-items:flex-start}}
+
+/* Three-language homepage culture preview (never display all languages at once) */
+.ihd-home-culture [data-ihd-locale]{display:none}
+html[lang="zh-CN"] .ihd-home-culture [data-ihd-locale="zh"]{display:block}
+html[lang="en"] .ihd-home-culture [data-ihd-locale="en"]{display:block}
+html[lang="ms"] .ihd-home-culture [data-ihd-locale="ms"]{display:block}
+/* Before script runs, default Chinese review */
+html:not([lang="zh-CN"]):not([lang="en"]):not([lang="ms"]) .ihd-home-culture [data-ihd-locale="zh"]{display:block}
