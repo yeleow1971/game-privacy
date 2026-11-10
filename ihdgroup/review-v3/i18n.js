@@ -249,6 +249,25 @@
     if(!shell)return;
     const l=current,d=culture;
     shell.replaceChildren();
+    // The public review page must NEVER receive the internal training corpus.
+    // Access to source content is enforced in the authenticated owner application.
+    if(!Array.isArray(d.rows) || d.rows.length===0){
+      const cover=h("div","ihd-culture-cover");
+      cover.append(
+        h("div","ihd-culture-eyebrow",({zh:"IHD GROUP · 内训资料权限",en:"IHD GROUP · INTERNAL TRAINING",ms:"IHD GROUP · LATIHAN DALAMAN"})[l]),
+        h("h1","",d.cultureTitle[l]),
+        h("p","ihd-culture-lead",d.cultureIntro[l])
+      );
+      shell.appendChild(cover);
+      const wrap=h("div","ihd-culture-container");
+      const notice=h("div","ihd-review-note");
+      notice.append(h("h2","ihd-culture-heading",d.manifestoTitle[l]),h("p","",d.reviewNote[l]));
+      wrap.appendChild(notice);
+      const back=h("button","button",({zh:"返回品牌故事 →",en:"Back to Our Story →",ms:"Kembali ke Kisah Kami →"})[l]);
+      back.onclick=()=>window.page("about");wrap.appendChild(back);
+      shell.appendChild(wrap);
+      return;
+    }
     const cover=h("div","ihd-culture-cover");
     cover.append(
       h("div","ihd-culture-eyebrow",({zh:"INSPIRATION · 企业精神",en:"INSPIRATION · OUR IDENTITY",ms:"INSPIRATION · IDENTITI KAMI"})[l]),
@@ -328,13 +347,13 @@
       const view=h("div","ihd-about-link");
       view.appendChild(h("div","ihd-culture-eyebrow","Official Source · 品牌文化"));
       view.appendChild(h("h2","","Our Corporate Culture & Manifesto"));
-      view.appendChild(h("p","","The founder's original in-salon company philosophy and manifesto are presented in three languages for your review."));
+      view.appendChild(h("p","","The company's detailed culture and manifesto now belong to internal staff training. Management will approve any public excerpts."));
       const button=h("button","primary","Explore Corporate Culture →");
       button.addEventListener("click",()=>window.page("culture"));
       view.appendChild(button);existingAbout.appendChild(view);
       T("Official Source · 品牌文化","正式品牌理念","Sumber Rasmi · Budaya Korporat","Original Brand Philosophy");
       T("Our Corporate Culture & Manifesto","企业文化与宣言","Budaya Korporat & Manifesto","Corporate Culture & Manifesto");
-      T("The founder's original in-salon company philosophy and manifesto are presented in three languages for your review.","根据店内原始照片，整理了完整企业文化及宣言，提供中英马三语核对。","Falsafah korporat dan manifesto asal dari salon disusun dalam tiga bahasa untuk semakan.","The original salon culture and manifesto have been prepared in three languages for review.");
+      T("The founder's original in-salon company philosophy and manifesto are presented in three languages for your review.","企业文化与宣言已归入内训，公开内容将由管理层审核选择。","Budaya korporat dan manifesto kini merupakan bahan latihan dalaman. Sebarang petikan awam memerlukan kelulusan pengurusan.","The detailed corporate culture and manifesto are internal training material; public excerpts require management approval.");
       T("Explore Corporate Culture →","查看企业文化 →","Terokai Budaya Korporat →","View Corporate Culture →");
     }
     const originalPage=window.page;
