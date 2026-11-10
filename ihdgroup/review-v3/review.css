@@ -1,0 +1,39 @@
+/* IHD GROUP: bilingual/trilingual owner preview, based on existing design palette */
+.top{flex-wrap:wrap}
+.ihd-lang{display:flex;align-items:center;gap:3px;flex-shrink:0;border-radius:999px;border:1px solid #c1a78f;padding:3px;background:#f8f1e8}
+.ihd-lang button{border:0;background:transparent;color:#725947;font-size:11px;font-weight:700;line-height:1.2;padding:9px 12px;border-radius:99px;white-space:nowrap;cursor:pointer}
+.ihd-lang button.current{background:#31241d;color:white;box-shadow:0 2px 9px #3824141d}
+.ihd-culture-page{background:#faf6f1;margin:0 auto 55px;max-width:1180px}
+.ihd-culture-cover{background:linear-gradient(125deg,#30221e,#715441);padding:75px 62px;color:#f8ede3;min-height:270px;display:flex;flex-direction:column;justify-content:center}
+.ihd-culture-eyebrow{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#bf997d}
+.ihd-culture-cover h1{font:normal clamp(35px,5vw,68px)/1.09 Georgia,"Times New Roman",serif;letter-spacing:-1px;margin:15px 0}
+.ihd-culture-lead{font-size:15px;line-height:1.8;color:#e0cfc2;max-width:790px}
+.ihd-culture-container{padding:60px 48px 40px}
+.ihd-culture-heading{font:normal clamp(29px,3.6vw,43px) Georgia,serif;margin:0 0 28px}
+.ihd-values-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.ihd-value-card{padding:27px 27px 33px;background:white;border:1px solid #e5d9cc;position:relative;min-width:0}
+.ihd-value-number{font:normal 30px Georgia,serif;color:#b59071;opacity:.86}
+.ihd-value-card h3{font:normal 23px/1.35 Georgia,"Microsoft Yahei",serif;margin:18px 0 10px;color:#2f241f}
+.ihd-value-card p{font-size:14px;line-height:1.9;color:#705c50;margin:0}
+.ihd-manifesto{margin-top:65px;padding:52px 53px;background:#e9dfd2;border-left:5px solid #a98061}
+.ihd-manifesto h2{font:normal clamp(31px,4vw,50px) Georgia,"Microsoft Yahei",serif;margin:14px 0 24px;color:#382820}
+.ihd-manifesto p{font-size:15px;line-height:2.05;color:#56463c;margin:0 0 19px}
+.ihd-review-note{background:white;padding:19px 24px;margin-top:27px;border:1px solid #e1d0bc}
+.ihd-review-note summary{font-weight:700;font-size:13px;color:#77543c;cursor:pointer}
+.ihd-review-note p{font-size:13px;line-height:1.8;color:#765847;margin-top:14px}
+.ihd-culture-actions{margin-top:29px;text-align:right}
+.ihd-about-link{background:#efe5d7;border:1px solid #d8c4ae;padding:30px 35px;margin-top:33px}
+.ihd-about-link h2{font:normal 31px Georgia,serif;margin:10px 0}
+.ihd-about-link p{color:#766054;font-size:13px;line-height:1.9;max-width:740px}
+.ihd-about-link button{margin-top:10px}
+.ihd-reviewbar{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:13px 25px;background:#f4e7d7;border-bottom:1px solid #e0c5aa;color:#795239;font-size:12px;line-height:1.6}
+.ihd-reviewbar strong{font-weight:700}
+.ihd-reviewbar a{font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.ihd-home-culture{padding:54px 53px;background:#f2e7db;border-top:1px solid #dfcbbc}
+.ihd-home-culture h2{font:normal clamp(30px,4vw,43px) Georgia,serif;margin:10px 0 17px}
+.ihd-home-culture p{font-size:15px;line-height:1.8;color:#715d4f;max-width:660px}
+.ihd-home-culture .ihd-home-culture-motto{font:italic 24px Georgia,serif;color:#9d7156;margin:18px 0 27px}
+.ihd-home-culture button{display:inline-flex;align-items:center;gap:9px}
+@media(max-width:1000px){.top{gap:10px}.top nav{order:3;width:100%;justify-content:center}.ihd-lang{margin-left:auto}}
+@media(max-width:800px){.ihd-culture-cover{padding:53px 34px}.ihd-culture-container{padding:37px 27px}.ihd-values-grid{grid-template-columns:1fr}.ihd-manifesto{padding:32px 30px}.ihd-home-culture{padding:42px 27px}}
+@media(max-width:560px){.top nav{gap:7px;justify-content:flex-start}.top nav button{font-size:11px;padding:7px 5px}.ihd-lang button{padding:8px 9px}.ihd-culture-cover{padding:43px 22px}.ihd-culture-container{padding:31px 17px}.ihd-value-card{padding:21px 20px}.ihd-manifesto{padding:27px 21px}.ihd-home-culture{padding:34px 20px}.ihd-reviewbar{padding:11px 14px;flex-direction:column;align-items:flex-start}}
