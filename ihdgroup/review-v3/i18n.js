@@ -301,13 +301,28 @@
       b.addEventListener("click",()=>languageChange(key));lang.appendChild(b);
     });
     bar.appendChild(lang);
-    const cultureLink=h("button","","Culture");
+    const cultureLink=h("button","ihd-culture-nav","Culture");
     cultureLink.dataset.tab="culture";cultureLink.type="button";
-    cultureLink.onclick=()=>window.page("culture");nav.appendChild(cultureLink);
+    cultureLink.setAttribute("aria-label","Corporate Culture / 企业文化 / Budaya Korporat");
+    cultureLink.addEventListener("click",e=>{
+      e.preventDefault();
+      e.stopPropagation();
+      window.page("culture");
+    });
+    const backendNav=nav.querySelector('[data-tab="studio"]');
+    if(backendNav)nav.insertBefore(cultureLink,backendNav);else nav.appendChild(cultureLink);
     const cultureShell=h("section","container ihd-culture-page off");
     cultureShell.id="ihd-culture";
     const footer=document.querySelector(".footer");
     if(footer)footer.before(cultureShell);else document.body.appendChild(cultureShell);
+    const homeHero=document.querySelector("#home .hero-copy .flex");
+    if(homeHero){
+      const cultureCta=h("button","button ihd-culture-hero-cta","Explore Our Culture →");
+      cultureCta.type="button";
+      cultureCta.addEventListener("click",()=>window.page("culture"));
+      homeHero.appendChild(cultureCta);
+      T("Explore Our Culture →","探索企业文化 →","Kenali Budaya Kami →","Explore Our Culture →");
+    }
     const existingAbout=document.querySelector("#about");
     if(existingAbout){
       const view=h("div","ihd-about-link");
